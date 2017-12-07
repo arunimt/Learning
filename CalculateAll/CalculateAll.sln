@@ -16,6 +16,7 @@ Global
 		CalculateAll\CalculateAll\CalculateAll.projitems*{1aecc23a-cf07-4f4c-ad56-97b48540e181}*SharedItemsImports = 13
 		CalculateAll\CalculateAll\CalculateAll.projitems*{4ab4382e-c529-4d8a-8d6a-3733b86c6b01}*SharedItemsImports = 4
 		CalculateAll\CalculateAll\CalculateAll.projitems*{6e29c6a5-1ef5-4857-b8b1-ab0070b16fd1}*SharedItemsImports = 4
+		CalculateAll\CalculateAll\CalculateAll.projitems*{eaeac137-7ad3-4f4f-92a4-ee68d2bf2ba4}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
