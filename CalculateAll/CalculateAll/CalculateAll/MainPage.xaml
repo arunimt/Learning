@@ -1,13 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:CalculateAll"
-             x:Class="CalculateAll.MainPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+             x:Class="CalculateAll.MainPage"
+             xmlns:pages="clr-namespace:CalculateAll"
+             Padding="0,40,0,0"
+             Icon="Icon.png"
+             Title="Calculate All"
+             BackgroundColor="Aquamarine">
+  <MasterDetailPage.Master>
+        <ContentPage Title="Menu"
+                 BackgroundColor="#e8e8e8">
+
+            <StackLayout Orientation="Vertical">
+
+                <!-- 
+             This StackLayout you can use for other
+             data that you want to have in your menu drawer
+        -->
+                <StackLayout BackgroundColor="#1976D2"
+                     HeightRequest="30">
+
+                    <Label Text="Calculate"
+                 FontSize="20"
+                 VerticalOptions="CenterAndExpand"
+                 TextColor="White"
+                 HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="navigationDrawerList"
+                  RowHeight="40"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#e8e8e8"
+                  ItemSelected="OnMenuItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+
+                                <!-- Main design for our menu items -->
+                                <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,10,0,10"
+                             Spacing="20">
+
+                                    <Image Source="{Binding Icon}"
+                         WidthRequest="30"
+                         HeightRequest="30"
+                         VerticalOptions="CenterAndExpand" />
+
+                                    <Label Text="{Binding Title}"
+                         FontSize="15"
+                         VerticalOptions="CenterAndExpand"
+                         TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+    </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+      
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+</MasterDetailPage>
