@@ -14,7 +14,9 @@ namespace Calculator
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+            base.OnCreate(savedInstanceState);  
+
+        
             #region Get UI controls 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
